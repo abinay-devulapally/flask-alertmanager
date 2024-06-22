@@ -2,13 +2,13 @@
 *.pyc            # Python compiled files
 *.pyo            # Python optimized files
 *.pyd            # Python debug files
-__pycache__/     # Python bytecode cache directory
+__pycache__/*    # Python bytecode cache directory
 
 # Virtual environment
-venv/             # Virtualenv or venv directory
+venv/*           # Virtualenv or venv directory
 
 # Database specific (if applicable)
-instance/         # Database instance directory (adjust as per your application)
+instance/*       # Database instance directory (adjust as per your application)
 
 # OS-specific
 .DS_Store        # macOS Finder file
