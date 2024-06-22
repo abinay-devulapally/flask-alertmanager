@@ -27,4 +27,4 @@ Ensure the following environment variables are set:
 
 ## License
 
-This project is released under the [MIT License](https://opensource.org/licenses/MIT). Feel free to customize this template to suit your project's specific needs.
+Feel free to customize this template to suit your project's specific needs.
