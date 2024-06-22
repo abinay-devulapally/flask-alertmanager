@@ -1,0 +1,13 @@
+curl -X POST http://localhost:8080/alerts \
+     -H "Content-Type: application/json" \
+     -d "{\"severity\": \"critical\", \"host\": \"server1\", \"details\": \"CPU usage high\", \"is_alarm\": 1, \"status\": \"active\"}"
+
+
+curl -X POST http://localhost:8080/clear-alert \
+     -H "Content-Type: application/json" \
+     -d "{\"severity\": \"critical\", \"host\": \"server1\", \"details\": \"CPU usage high\", \"is_alarm\": 1, \"status\": \"cleared\"}"
+
+
+curl -X POST http://localhost:8080/clear-alert \
+     -H "Content-Type: application/json" \
+     -d "{\"severity\": \"medium\", \"host\": \"host-591is\", \"details\": \"Details about alert ECPHEPY9TT\", \"is_alarm\": false, \"status\": \"cleared\"}"

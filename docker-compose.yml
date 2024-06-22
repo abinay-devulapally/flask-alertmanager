@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - FLASK_ENV=development  # Optional: Set Flask environment mode
+      - SQLALCHEMY_DATABASE_URI=postgresql://postgres:password@localhost:5432/alerts_db
+    volumes:
+      - ./flask-alert.log:/app/flask-alert.log  # Mount log file externally if needed
+
+volumes:
+  db_data:
+    driver: local

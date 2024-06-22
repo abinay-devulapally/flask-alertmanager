@@ -1,0 +1,9 @@
+2024-06-22 19:31:46,906 - ERROR - Error updating alert: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-06-22 19:47:58,735 - ERROR - Error creating alert: (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO alert (id, time_raised, severity, host, details, is_alarm, status) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('50600501-2136-4957-8101-94bb17c41005', '2024-06-22 14:17:58.734580', 'medium', 'server1', 'nginx service failed to connect database', 0, 'active')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-06-22 19:48:18,366 - ERROR - Error creating alert: (sqlite3.IntegrityError) datatype mismatch
+[SQL: INSERT INTO alert (id, time_raised, severity, host, details, is_alarm, status) VALUES (?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('76a6b44a-f2d3-4fdb-91c8-f4ffe1fffa4e', '2024-06-22 14:18:18.365903', 'medium', 'server4', 'nginx service failed to connect database', 0, 'active')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
