@@ -2,33 +2,33 @@
 *.pyc            # Python compiled files
 *.pyo            # Python optimized files
 *.pyd            # Python debug files
-__pycache__/*    # Python bytecode cache directory
+__pycache__/
 
 # Virtual environment
-venv/*           # Virtualenv or venv directory
+venv/    
 
 # Database specific (if applicable)
-instance/*       # Database instance directory (adjust as per your application)
+instance/   
 
 # OS-specific
-.DS_Store        # macOS Finder file
+.DS_Store       
 
 # Editor/IDE specific
-.vscode/         # Visual Studio Code directory
-.idea/           # PyCharm directory
-*.code-workspace # VS Code workspace file
+.vscode/         
+.idea/           
+*.code-workspace 
 
 # Dependency directories (if any)
-node_modules/    # Node.js dependencies (if any)
+node_modules/    
 
 # Log files
-*.log            # Log files
+flask-alert.log        
 
 # Ignore any local development settings or sensitive information files
-.env             # Environment variable file (sensitive information)
+.env     
 
 # Ignore database migration scripts if using an ORM (e.g., SQLAlchemy)
-/migrations/     # Database migration scripts directory
+/migrations/    
 
 # Ignore generated files or directories
 /generated/

@@ -8,6 +8,84 @@ This project is a Flask application for managing cloud alerts. It includes funct
 2. Build the Docker container using `docker-compose up --build`.
 3. Access the application at `http://localhost:8080`.
 
+# Local Set-up
+
+## Setting up a Python Virtual Environment (venv)
+
+A Python virtual environment (venv) allows you to isolate Python environments for different projects, preventing dependency conflicts. Here's how to set it up:
+
+### Prerequisites
+
+Ensure Python 3.3+ is installed on your system.
+
+### Create and Activate
+
+1. **Create venv:**
+
+   - Windows:
+
+     ```bash
+     python -m venv venv
+     ```
+
+   - macOS/Linux:
+     ```bash
+     python3 -m venv venv
+     ```
+
+2. **Activate venv:**
+
+   - Windows:
+
+     ```bash
+     venv\Scripts\activate
+     ```
+
+   - macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+
+### Usage
+
+While venv is active:
+
+- pip install -r requirements.txt
+
+Certainly! Here's the text formatted for a README file:
+
+### Setting `FLASK_APP` Environment Variable
+
+#### Linux/Mac:
+
+```bash
+export FLASK_APP=cloud-alert.py
+```
+
+#### Windows (Command Prompt):
+
+```bash
+set FLASK_APP=cloud-alert.py
+```
+
+#### Windows (PowerShell):
+
+```bash
+$env:FLASK_APP = "cloud-alert.py"
+```
+
+### Deactivate
+
+To exit venv:
+
+```bash
+deactivate
+```
+
+### Delete venv
+
+If needed, delete the `venv` directory after deactivating.
+
 ## Usage
 
 To use the application, you can interact with the following endpoints:
