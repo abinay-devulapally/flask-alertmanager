@@ -55,6 +55,7 @@ def internal_server_error(error):
 @app.route('/alerts', methods=['POST'])
 def create_alert():
     try:
+        print("data from backend",request.get_json(),type(request.get_json()))
         data = request.get_json()
         alert = Alert(
             severity=data['severity'],
@@ -210,6 +211,25 @@ def delete_alert(alert_id):
         db.session.rollback()
         app.logger.error(f"Error deleting alert: {str(e)}")
         return jsonify({'error': 'Internal server error', 'message': str(e)}), 500
+    
+@app.route('/clear-all-alerts', methods=['DELETE'])
+def clear_all_alerts():
+    try:
+        alerts_to_clear = Alert.query.filter_by(status='active').all()
+
+        for alert in alerts_to_clear:
+            app.logger.debug(f"Clearing alert with ID {alert.id}")
+            db.session.delete(alert)
+        
+        db.session.commit()
+        
+        return jsonify({'message': 'All alerts cleared successfully'}), 200
+    
+    except Exception as e:
+        db.session.rollback()
+        app.logger.error(f"Error clearing alerts: {str(e)}")
+        return jsonify({'error': 'Internal server error', 'message': str(e)}), 500
+
 
 @app.cli.command("list-alerts")
 def list_alerts():
